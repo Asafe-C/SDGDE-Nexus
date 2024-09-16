@@ -11,17 +11,21 @@
 </head>
 <body>
     <div class="container">
-               <div class="containerEscolha" onclick="window.location.href='/HTML/login-participante.html'" style="cursor: pointer;">
-                    <div class="furo"></div>
-                    <img src="/IMAGES/group.png" alt="">
-                    <div class="decoracao" id="P"><h1>PARTICIPANTE</h1></div>
-
+        <div class="caixa">
+            <form>
+                <div class="form-floating mb-4">
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    <label for="floatingInput">Email</label>
                 </div>
-                <div class="containerEscolha" onclick="window.location.href='/HTML/login-organizador.html'" style="cursor: pointer;">
-                    <div class="furo"></div>
-                    <img src="/IMAGES/476661.png" alt="">
-                    <div class="decoracao" id="O"><h1>ORGANIZADOR</h1></div>
+                <div class="form-floating mb-4">
+                    <input type="password" class="form-control" id="senha" placeholder="Senha" required>
+                    <label for="floatingPassword">Senha</label>
                 </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <hr/>
+            <a class="btn btn-primary" href="/HTML/cadastro.html" role="button">Cadastre-se</a>
+        </div>
     </div>
 </body>
 </html>
