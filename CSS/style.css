@@ -1,1 +1,5 @@
-/*olá mundo
+body{
+    margin: 5vh 0;
+    background-color: rgb(222, 222, 222);
+    height: 90vh;
+}
