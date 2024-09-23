@@ -1,0 +1,23 @@
+.barrapesquisa{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#criarConta{
+    border-right: solid 2px rgba(128, 128, 128, 0.400);
+    border-radius: 0;
+}
+
+.seção {
+    display: flex;
+    align-items: center;
+}
+
+.h1{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
