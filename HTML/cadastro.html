@@ -32,8 +32,37 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="cpf" class="form-label">CPF</label>
-                        <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
+                        <label for="estado" class="form-label">Selecione seu Estado</label>
+                        <select class="form-select" id="estado"> <!--Pra avisar eventos na região -->
+                            <option value="" disabled selected>Selecionar estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="email" class="form-label">Email</label>
@@ -61,8 +90,8 @@
                                 <input type="text" class="form-control" id="company" placeholder="Nome da empresa">
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="contact" class="form-label">Telefone de Contato</label>
-                                <input type="tel" class="form-control" id="contact" placeholder="Telefone para contato">
+                                <label for="cnpj" class="form-label">CNPJ da Empresa</label>
+                                <input type="text" class="form-control" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18">
                             </div>
                         </div>
                     </div>
