@@ -12,8 +12,11 @@
 <body>
     <div class="container">
         <div class="caixa">
-            <h1 class="display-6">Seja Bem-Vindo!</h1>
-            <hr>
+            <div class="titulo">
+                <img src="/IMAGES/logo.png" alt="Logo da Nexus.EV" class="logo">
+                <h1 class="display-6">Seja Bem-Vindo!</h1>
+            </div>
+            <hr style="margin-bottom: -2vh;">
             <form id="login" class="needs-validation" novalidate>
                 <div class="form-floating mb-4">
                     <input type="email" class="form-control" id="email" placeholder="Email" required>
@@ -26,7 +29,7 @@
                 <button type="submit" class="btn btn-primary">Entrar</button>
             </form>
             <hr/>
-            <a class="btn btn-primary mb-4" href="/HTML/cadastro.html" role="button">Cadastre-se</a>
+            <button class="btn btn-primary mb-4" href="/HTML/cadastro.html">Cadastre-se</button>
         </div>
     </div>
     <script src="/JS/login.js"></script>

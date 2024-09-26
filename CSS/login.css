@@ -2,6 +2,19 @@ body{
     margin: 5vh 0;
 }
 
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    margin-top: 2vh;
+    margin-right: 1vw;
+    height: 70px;
+    width: auto;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -10,7 +23,7 @@ body{
 }
 
 .caixa{
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(153, 165, 177, 0.275);
     border: solid 0.2px #8a8a8a52;
     box-shadow: 1px 1px 7px 2px rgba(134, 134, 134, 0.3);
     width: 35vw;
@@ -38,7 +51,7 @@ hr{
     border-radius: 5%;
 }
 
-.form-control, a, hr{
+.form-control, a, hr, button{
     width: 25vw;
 }
 
