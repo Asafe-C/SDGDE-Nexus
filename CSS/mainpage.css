@@ -1,4 +1,4 @@
-header{
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +13,13 @@ header{
     margin-top: -10px;
 }
 
+.nav-link{
+    color: #f0f0f0;
+}
 .seção, footer {
     display: flex;
     justify-content: center;
-    background-color: rgba(190, 190, 190, 0.37);
+    background-color: #1d0d46;
     padding: 2vh;
     width: 100%;
 }
@@ -66,4 +69,9 @@ hr{
 
 .pp{
     width: 100%;
+}
+
+.card-img-top{
+        height: 200px;
+        object-fit: cover;
 }
