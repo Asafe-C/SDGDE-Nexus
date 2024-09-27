@@ -62,6 +62,18 @@ h2{
     background-color: rgba(190, 190, 190, 0.37);
 }
 
+.filtros{
+    margin-bottom: 3vh;
+}
+
+.filtro-btn{
+    border-radius: 50px;
+    height: 7vh;
+    width: 8vw;
+    border: none;
+    background-color: #7a849154;
+}
+
 hr{
     margin-top: 5vh;
     border: solid 1.5px #000000;
@@ -74,4 +86,25 @@ hr{
 .card-img-top{
         height: 200px;
         object-fit: cover;
+}
+
+.text-card{
+    height: 12vh;
+}
+
+.modal-body img{
+    width: 100%;
+}
+
+.info-modal{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    color: rgb(82, 82, 82);
+}
+.desc-ev{
+    text-align: justify;
+    height: 15vh;
+    overflow: auto;
 }
