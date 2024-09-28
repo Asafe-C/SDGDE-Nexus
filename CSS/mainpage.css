@@ -94,13 +94,17 @@ hr{
 
 .modal-body img{
     width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .info-modal{
     margin-top: 2vh;
     display: flex;
     justify-content: center;
-    gap: 5vw;
+    text-align: center;
+    font-size: 85%;
+    gap: 2vw;
     color: rgb(82, 82, 82);
 }
 .desc-ev{
