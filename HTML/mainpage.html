@@ -19,16 +19,17 @@
     <img src="/IMAGES/logo.png" alt="" class="logo">
     <ul class="nav nav-pills">
       <li class="nav-item opcOrganizador">
-        <a class="nav-link" href="#">Criar Novo Evento</a>
+        <a class="nav-link" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#CriarEvento">Criar Novo
+          Evento</a>
       </li>
       <li class="nav-item opcUser">
-        <a class="nav-link" href="#">Suas Inscrições</a>
+        <a class="nav-link" href="/HTML/inscrições.html">Suas Inscrições</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="cadastro.html" id="criarConta">Crie Sua Conta</a>
+        <a class="nav-link" href="/HTML/cadastro.html" id="criarConta">Crie Sua Conta</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="/HTML/login.html">Login</a>
       </li>
       <li class="nav-item">
         <a style="background-color: #0EAD69;" class="nav-link active" aria-current="page" href="#">Contate-nos</a>
@@ -186,241 +187,356 @@
         </div>
       </div>
     </div>
+
+    <!-- Modais Predefinidos -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="AnimageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">ANIMAGE</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/IMAGES/Animage.PNG" alt="Banner"> <!-- Imagem -->
+            <div class="info-modal"> <!-- Infos -->
+              <p>Datas: <br> 01/10 - 06/10</p>
+              <p>Valor da Entrada: <br> Gratuito</p>
+              <p>Região: <br> PE</p>
+              <p>Realização: <br> LEÃO PRODUÇÕES</p>
+            </div> <!-- Descrição Abaixo-->
+            <p class="desc-ev">O Animage é um festival gratuito e para todas as idades, que acontece em vários locais do
+              Recife, como o Teatro do Parque, o Cinema da Fundação Derby, o Cinema da UFPE, o Parque da Macaxeira e a
+              Praça da Lagoa do Araçá.
+              O festival conta com uma Mostra Competitiva de curtas, que premia os melhores filmes em categorias como
+              Direção, Roteiro, Direção de Arte, Técnica e Som. O grande prêmio é o Melhor Curta, que recebe uma
+              estatueta
+              e um valor em dinheiro.
+              O Animage também oferece mostras especiais de curtas e longas, além de atividades como oficinas,
+              masterclasses e bate-papos com realizadores.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="RecnModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">RECn`Play</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/IMAGES/recnplay.png" alt="Banner"> <!-- Imagem -->
+            <div class="info-modal"> <!-- Infos -->
+              <p>Datas: <br> 06/11 - 09/11</p>
+              <p>Valor da Entrada: <br> Gratuito</p>
+              <p>Região: <br> PE</p>
+              <p>Realização: <br> AMPLA</p>
+            </div> <!-- Descrição Abaixo-->
+            <p class="desc-ev">Imagine um evento que une tecnologia, cultura, arte, negócios e inovação, tudo de forma
+              gratuita! Esse é o REC'n'Play, que acontecerá de 6 a 9 de novembro no vibrante Bairro do Recife.
+              Neste ano, você é nosso convidado especial para explorar o futuro em mais de 600 atividades interativas e
+              gratuitas. Serão oficinas, palestras, workshops, shows e exposições, todas distribuídas em temas como
+              Cidades e Sociedade, Economia Criativa, Negócios e Tech.
+              O REC’n’Play é para todos, de todas as idades e áreas. Seja você estudante, empreendedor, profissional de
+              startup, ou apenas alguém em busca de novas conexões e ideias, esse é o lugar para se inspirar e se
+              conectar
+              com o Recife e o futuro. Garanta sua participação! Inscreva-se agora e seja o primeiro a receber novidades
+              exclusivas sobre o festival.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="BienalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Bienal - PE</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/IMAGES/bienalPE.jpg" alt="Banner"> <!-- Imagem -->
+            <div class="info-modal"> <!-- Infos -->
+              <p>Datas: <br> 06/10 - 15/10</p>
+              <p>Valor da Entrada: <br> R$20,00 - R$35,00</p>
+              <p>Região: <br> PE</p>
+              <p>Realização: <br> Governo Federal</p>
+            </div> <!-- Descrição Abaixo-->
+            <p class="desc-ev">Um evento literário do porte da Bienal Internacional do Livro de Pernambuco, terceiro
+              maior
+              do Brasil e a principal referência para o setor editorial no Norte e Nordeste, é um acontecimento
+              agregador
+              de convergência no universo do livro e da leitura. Com múltiplas atividades desenvolvidas nos segmentos da
+              educação, do conhecimento, das artes e da cultura, proporcionando indiscutível incentivo não apenas à
+              formação de novos leitores – mas de cidadãos com apreço pelo madurecimento cultural, pela
+              bibliodiversidade
+              e pela consciência crítica.
+              Realizada a cada dois anos, e já se preparando para a sua décima quarta edição, a Bienal do Livro
+              pernambucana foi oficialmente registrada no Calendário de Eventos do Estado em 2011, pela lei 14.536. O
+              reconhecimento do poder público estadual é compartilhado com as prefeituras municipais, que mobilizam
+              esforços e recursos para estimular a participação de professores e estudantes da rede pública de ensino,
+              em
+              virtude da grande oferta de títulos e de atividades de conteúdo.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="RockModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Bienal - PE</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/IMAGES/og-rir-br.png" alt="Banner"> <!-- Imagem -->
+            <div class="info-modal"> <!-- Infos -->
+              <p>Datas: <br> 13/09 - 22/09</p>
+              <p>Valor da Entrada: <br> R$397,50 - R$795,00</p>
+              <p>Região: <br> RJ</p>
+              <p>Realização: <br> Rock in Rio</p>
+            </div> <!-- Descrição Abaixo-->
+            <p class="desc-ev">O Rock in Rio é um evento inclusivo e em todas as edições estabelece parcerias com
+              entidades que desenvolvem projetos e que possuem conhecimento técnico nesta área, testando sempre as
+              infraestruturas para um melhor serviço para todos. Em breve, disponibilizaremos mais informações úteis.
+              Para qualquer questão ou sugestão, por favor, contactar acessibilidade@rockinrio.com</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="RioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">RIO INNOVATION WEEK</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/IMAGES/rioinnovation.jpg" alt="Banner"> <!-- Imagem -->
+            <div class="info-modal"> <!-- Infos -->
+              <p>Datas: <br> 13/08 - 16/08</p>
+              <p>Valor da Entrada: <br> R$58,00 - R$126,50</p>
+              <p>Região: <br> RJ</p>
+              <p>Realização: <br> Governo Federal</p>
+            </div> <!-- Descrição Abaixo-->
+            <p class="desc-ev">O Rio Innovation Week (RIW) é um evento internacional de inovação e tecnologia que
+              acontece
+              no Rio de Janeiro. O evento reúne empresas e profissionais de diversos setores da economia, em
+              conferências
+              e feiras de negócios.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="BGSModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Brasil Game Show</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/IMAGES/BGS.PNG" alt="Banner"> <!-- Imagem -->
+            <div class="info-modal"> <!-- Infos -->
+              <p>Datas: <br> 09/10 - 13/10</p>
+              <p>Valor da Entrada: <br> R$109,00 - R$2.199,00</p>
+              <p>Região: <br> SP</p>
+              <p>Realização: <br> Agencia Flare</p>
+            </div> <!-- Descrição Abaixo-->
+            <p class="desc-ev">A Brasil Game Show (BGS) 2024 será realizada entre os dias 9 e 13 de outubro no Expo
+              Center
+              Norte, em São Paulo. O local é um dos maiores centros de convenções da cidade e está localizado na Rua
+              José
+              Bernardo Pinto, 333, Vila Guilherme.
+              A BGS é uma feira de games que acontece anualmente, geralmente em outubro, perto do Dia das Crianças. É
+              considerada uma das maiores feiras de games da América Latina e uma das maiores do mundo.
+              A BGS 2024 será a 15ª edição do evento, que teve sua estreia em 2009 no Rio de Janeiro. Desde 2013, a
+              feira
+              é realizada em São Paulo.
+              A BGS é uma oportunidade de negócios para o mercado de games, atraindo investidores, empresários e
+              profissionais. Além disso, o evento também tem uma preocupação social, tendo doado mais de 450 toneladas
+              de
+              alimentos ao longo das suas edições.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="LollaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">LollaPalooza</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="/IMAGES/lollapalooza.jpg" alt="Banner"> <!-- Imagem -->
+            <div class="info-modal"> <!-- Infos -->
+              <p>Datas: <br> 28/03 - 30/03</p>
+              <p>Valor da Entrada: <br> R$425,00 - R$4.850,00</p>
+              <p>Região: <br> SP</p>
+              <p>Realização: <br> Lollapalooza</p>
+            </div> <!-- Descrição Abaixo-->
+            <p class="desc-ev">O Lollapalooza é um festival musical que reúne artistas de vários estilos, como rock
+              alternativo, heavy metal, hip hop, pop e música eletrônica. O festival também inclui performances de
+              comédia
+              e dança, além de estandes de artesanato.
+              O Lollapalooza foi criado em 1991 pelo vocalista do Jane's Addiction, Perry Farrell, e teve sua primeira
+              edição nos Estados Unidos como um evento itinerante. O nome vem de uma expressão americana dos séculos XIX
+              e
+              XX que significa "algo extraordinário ou incomum".
+              O Lollapalooza se tornou um dos eventos mais importantes da cena musical internacional e se expandiu para
+              vários países, incluindo Brasil, Chile, Argentina, Alemanha, França e Suécia. No Brasil, o festival
+              acontece
+              anualmente em São Paulo. </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="CriarEvento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Evento</h1> <!-- Nome do Modal -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"> <!-- Formulário para Novo Evento -->
+            <form>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="inicio" class="form-label">Data de Início</label>
+                  <input type="date" class="form-control" id="inicio">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="fim" class="form-label">Data de Finalização</label>
+                  <input type="date" class="form-control" id="fim">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="regiao" class="form-label">Região</label>
+                  <select class="form-select" id="regiao"> <!--Para avisar eventos na região -->
+                    <option value="" disabled selected>Selecionar região</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="bannerEV" class="form-label">Banner</label>
+                  <input type="file" class="form-control" id="bannerEV">
+                </div>
+              </div>
+              <br>
+              <p style="font-size: 110%; text-align: center;">Filtros</p>
+              <div class="filtroOrg" style="margin-bottom: 1vh;">
+                <input type="checkbox" class="btn-check" id="btn-check-music" value="option1" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check-music">Música</label>
+
+                <input type="checkbox" class="btn-check" id="btn-check-tech" value="option2" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check-tech">Tecnologia</label>
+
+                <input type="checkbox" class="btn-check" id="btn-check-book" value="option3" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check-book">Livro</label>
+
+                <input type="checkbox" class="btn-check" id="btn-check-fashion" value="option4" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check-fashion">Moda</label>
+              </div>
+              <div class="filtroOrg">
+                <input type="checkbox" class="btn-check" id="btn-check-games" value="option5" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check-games">Games</label>
+
+                <input type="checkbox" class="btn-check" id="btn-check-workshops" value="option6" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check-workshops">Workshops</label>
+
+                <input type="checkbox" class="btn-check" id="btn-check-cinema" value="option7" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check-cinema">Cinema</label>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="descricao" class="form-label">Descrição</label>
+                  <textarea class="form-control" id="descricao" rows="5"
+                    placeholder="Faça uma descrição do seu evento"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success">Criar Evento</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Modal -->
+
+      <!-- Fim dos Modais Predefinidos -->
   </main>
-
-  <!-- Modais -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="AnimageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">ANIMAGE</h1> <!-- Nome do Modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="/IMAGES/Animage.PNG" alt="Banner"> <!-- Imagem -->
-          <div class="info-modal"> <!-- Infos -->
-            <p>Datas: <br> 01/10 - 06/10</p>
-            <p>Valor da Entrada: <br> Gratuito</p>
-            <p>Região: <br> PE</p>
-            <p>Realização: <br> LEÃO PRODUÇÕES</p>
-          </div> <!-- Descrição Abaixo-->
-          <p class="desc-ev">O Animage é um festival gratuito e para todas as idades, que acontece em vários locais do
-            Recife, como o Teatro do Parque, o Cinema da Fundação Derby, o Cinema da UFPE, o Parque da Macaxeira e a
-            Praça da Lagoa do Araçá.
-            O festival conta com uma Mostra Competitiva de curtas, que premia os melhores filmes em categorias como
-            Direção, Roteiro, Direção de Arte, Técnica e Som. O grande prêmio é o Melhor Curta, que recebe uma estatueta
-            e um valor em dinheiro.
-            O Animage também oferece mostras especiais de curtas e longas, além de atividades como oficinas,
-            masterclasses e bate-papos com realizadores.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Inscrever-se</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim do Modal -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="RecnModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">RECn`Play</h1> <!-- Nome do Modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="/IMAGES/recnplay.png" alt="Banner"> <!-- Imagem -->
-          <div class="info-modal"> <!-- Infos -->
-            <p>Datas: <br> 06/11 - 09/11</p>
-            <p>Valor da Entrada: <br> Gratuito</p>
-            <p>Região: <br> PE</p>
-            <p>Realização: <br> AMPLA</p>
-          </div> <!-- Descrição Abaixo-->
-          <p class="desc-ev">Imagine um evento que une tecnologia, cultura, arte, negócios e inovação, tudo de forma
-            gratuita! Esse é o REC'n'Play, que acontecerá de 6 a 9 de novembro no vibrante Bairro do Recife.
-            Neste ano, você é nosso convidado especial para explorar o futuro em mais de 600 atividades interativas e
-            gratuitas. Serão oficinas, palestras, workshops, shows e exposições, todas distribuídas em temas como
-            Cidades e Sociedade, Economia Criativa, Negócios e Tech.
-            O REC’n’Play é para todos, de todas as idades e áreas. Seja você estudante, empreendedor, profissional de
-            startup, ou apenas alguém em busca de novas conexões e ideias, esse é o lugar para se inspirar e se conectar
-            com o Recife e o futuro. Garanta sua participação! Inscreva-se agora e seja o primeiro a receber novidades
-            exclusivas sobre o festival.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Inscrever-se</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim do Modal -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="BienalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Bienal - PE</h1> <!-- Nome do Modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="/IMAGES/bienalPE.jpg" alt="Banner"> <!-- Imagem -->
-          <div class="info-modal"> <!-- Infos -->
-            <p>Datas: <br> 06/10 - 15/10</p>
-            <p>Valor da Entrada: <br> R$20,00 - R$35,00</p>
-            <p>Região: <br> PE</p>
-            <p>Realização: <br> Governo Federal</p>
-          </div> <!-- Descrição Abaixo-->
-          <p class="desc-ev">Um evento literário do porte da Bienal Internacional do Livro de Pernambuco, terceiro maior
-            do Brasil e a principal referência para o setor editorial no Norte e Nordeste, é um acontecimento agregador
-            de convergência no universo do livro e da leitura. Com múltiplas atividades desenvolvidas nos segmentos da
-            educação, do conhecimento, das artes e da cultura, proporcionando indiscutível incentivo não apenas à
-            formação de novos leitores – mas de cidadãos com apreço pelo madurecimento cultural, pela bibliodiversidade
-            e pela consciência crítica.
-            Realizada a cada dois anos, e já se preparando para a sua décima quarta edição, a Bienal do Livro
-            pernambucana foi oficialmente registrada no Calendário de Eventos do Estado em 2011, pela lei 14.536. O
-            reconhecimento do poder público estadual é compartilhado com as prefeituras municipais, que mobilizam
-            esforços e recursos para estimular a participação de professores e estudantes da rede pública de ensino, em
-            virtude da grande oferta de títulos e de atividades de conteúdo.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Inscrever-se</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim do Modal -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="RockModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Bienal - PE</h1> <!-- Nome do Modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="/IMAGES/og-rir-br.png" alt="Banner"> <!-- Imagem -->
-          <div class="info-modal"> <!-- Infos -->
-            <p>Datas: <br> 13/09 - 22/09</p>
-            <p>Valor da Entrada: <br> R$397,50 - R$795,00</p>
-            <p>Região: <br> RJ</p>
-            <p>Realização: <br> Rock in Rio</p>
-          </div> <!-- Descrição Abaixo-->
-          <p class="desc-ev">O Rock in Rio é um evento inclusivo e em todas as edições estabelece parcerias com
-            entidades que desenvolvem projetos e que possuem conhecimento técnico nesta área, testando sempre as
-            infraestruturas para um melhor serviço para todos. Em breve, disponibilizaremos mais informações úteis.
-            Para qualquer questão ou sugestão, por favor, contactar acessibilidade@rockinrio.com</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Inscrever-se</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim do Modal -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="RioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">RIO INNOVATION WEEK</h1> <!-- Nome do Modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="/IMAGES/rioinnovation.jpg" alt="Banner"> <!-- Imagem -->
-          <div class="info-modal"> <!-- Infos -->
-            <p>Datas: <br> 13/08 - 16/08</p>
-            <p>Valor da Entrada: <br> R$58,00 - R$126,50</p>
-            <p>Região: <br> RJ</p>
-            <p>Realização: <br> Governo Federal</p>
-          </div> <!-- Descrição Abaixo-->
-          <p class="desc-ev">O Rio Innovation Week (RIW) é um evento internacional de inovação e tecnologia que acontece
-            no Rio de Janeiro. O evento reúne empresas e profissionais de diversos setores da economia, em conferências
-            e feiras de negócios.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Inscrever-se</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim do Modal -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="BGSModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Brasil Game Show</h1> <!-- Nome do Modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="/IMAGES/BGS.PNG" alt="Banner"> <!-- Imagem -->
-          <div class="info-modal"> <!-- Infos -->
-            <p>Datas: <br> 09/10 - 13/10</p>
-            <p>Valor da Entrada: <br> R$109,00 - R$2.199,00</p>
-            <p>Região: <br> SP</p>
-            <p>Realização: <br> Agencia Flare</p>
-          </div> <!-- Descrição Abaixo-->
-          <p class="desc-ev">A Brasil Game Show (BGS) 2024 será realizada entre os dias 9 e 13 de outubro no Expo Center
-            Norte, em São Paulo. O local é um dos maiores centros de convenções da cidade e está localizado na Rua José
-            Bernardo Pinto, 333, Vila Guilherme.
-            A BGS é uma feira de games que acontece anualmente, geralmente em outubro, perto do Dia das Crianças. É
-            considerada uma das maiores feiras de games da América Latina e uma das maiores do mundo.
-            A BGS 2024 será a 15ª edição do evento, que teve sua estreia em 2009 no Rio de Janeiro. Desde 2013, a feira
-            é realizada em São Paulo.
-            A BGS é uma oportunidade de negócios para o mercado de games, atraindo investidores, empresários e
-            profissionais. Além disso, o evento também tem uma preocupação social, tendo doado mais de 450 toneladas de
-            alimentos ao longo das suas edições.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Inscrever-se</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim do Modal -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="LollaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Bienal - PE</h1> <!-- Nome do Modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img src="/IMAGES/lollapalooza.jpg" alt="Banner"> <!-- Imagem -->
-          <div class="info-modal"> <!-- Infos -->
-            <p>Datas: <br> 28/03 - 30/03</p>
-            <p>Valor da Entrada: <br> R$425,00 - R$4.850,00</p>
-            <p>Região: <br> SP</p>
-            <p>Realização: <br> Lollapalooza</p>
-          </div> <!-- Descrição Abaixo-->
-          <p class="desc-ev">O Lollapalooza é um festival musical que reúne artistas de vários estilos, como rock
-            alternativo, heavy metal, hip hop, pop e música eletrônica. O festival também inclui performances de comédia
-            e dança, além de estandes de artesanato.
-            O Lollapalooza foi criado em 1991 pelo vocalista do Jane's Addiction, Perry Farrell, e teve sua primeira
-            edição nos Estados Unidos como um evento itinerante. O nome vem de uma expressão americana dos séculos XIX e
-            XX que significa "algo extraordinário ou incomum".
-            O Lollapalooza se tornou um dos eventos mais importantes da cena musical internacional e se expandiu para
-            vários países, incluindo Brasil, Chile, Argentina, Alemanha, França e Suécia. No Brasil, o festival acontece
-            anualmente em São Paulo. </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Inscrever-se</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fim do Modal -->
-
-  <!-- Fim dos Modais -->
-
   <footer>
     <ul class="nav justify-content-center">
       <li class="nav-item">
@@ -437,6 +553,7 @@
       </li>
     </ul>
   </footer>
+  <script src="/JS/script.js"></script>
 </body>
 
 </html>

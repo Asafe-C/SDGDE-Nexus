@@ -112,3 +112,10 @@ hr{
     height: 15vh;
     overflow: auto;
 }
+
+.filtroOrg{
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+    width: 100%;
+}
