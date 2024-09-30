@@ -11,11 +11,12 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/CSS/mainpage.css">
   <link rel="stylesheet" href="/CSS/style.css">
-  <title>Sistema de Gerenciamento de Eventos</title>
+  <link rel="shortcut icon" href="/IMAGES/Logofav.png" type="image/x-icon">
+  <title>Homepage | NexusEV</title>
 </head>
 
 <body>
-  <nav class="seção">
+  <header class="seção">
     <img src="/IMAGES/logo.png" alt="" class="logo">
     <ul class="nav nav-pills">
       <li class="nav-item">
@@ -28,13 +29,15 @@
       <li class="nav-item" id="loginSection">
         <a class="nav-link" href="/HTML/login.html">Login</a>
       </li>
+      <li class="nav-item" id="createEventForm" style="display: none">
+        <button style="background-color: #0EAD69; margin-left: 1vw;"type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Criar Evento</button>
+      </li>
       <li class="nav-item" id="userSection" style="display: none;">
         <span class="nav-link" id="username"></span>
         <img src="/IMAGES/user-icon.png" alt="User Icon" class="user-icon">
       </li>
     </ul>
-  </nav>
-  <p class="h1">A MAIS SIMPLES E PODEROSA FORMA DE GERENCIAMENTO DE EVENTOS</p>
+  </header>
   <main>
     <div class="tbFiltro">
       <div class="filtro">
@@ -64,124 +67,39 @@
       </div>
     </div>
     <br>
-    <br>
-    <br>
     <div class="container text-center">
-      <hr>
-      <h2>EVENTOS NA SUA ÁREA</h2>
-      <hr>
-      <div id="eventosProximos" class="row linhaEventos">
-        <!-- Eventos da região aparecem aqui -->
+      <div id="opcParticipante" style="display: none;">
+        <hr>
+        <h2>SUAS INSCRIÇÕES</h2>
+        <hr>
+        <br>
+        <div id="eventosInscritos" class="row linhaEventos">
+          <!-- As inscrições aparecem aKyu -->
+        </div>
+      </div>
+      <br>
+      <div>
+        <hr>
+        <h2>EVENTOS NA SUA ÁREA</h2>
+        <hr>
+        <br>
+        <div id="eventosProximos" class="row linhaEventos">
+          <!-- Eventos da região aparecem aqui -->
+        </div>
+        <br>
       </div>
       <br>
       <hr>
-      <h2>EVENTOS DISPONÍVEIS</h2>
-      <hr>
-      <div id="eventos" class="row linhaEventos">
-        <!-- Os eventos aparecem aqui -->
+      <div>
+        <h2>EVENTOS DISPONÍVEIS</h2>
+        <hr>
+        <br>
+        <div id="eventos" class="row linhaEventos">
+          <!-- Os eventos aparecem aqui -->
+        </div>
+        <br>
       </div>
-      <br>
-      <hr>
-      <h2>SUAS INSCRIÇÕES</h2>
-      <hr>
-      <div id="eventosInscritos" class="row linhaEventos">
-        <!-- As inscrições aparecem aKyu -->
-      </div>
-      <br>
-      <hr>
-      <!-- Formulário de Criação de Evento -->
-      <div id="createEventForm" style="display: none; padding: 20px; border: 1px solid #ccc; margin: 20px 0;">
-        <h2>Criar Novo Evento</h2>
-        <form id="newEventForm">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="titulo" class="form-label">Título do Evento</label>
-              <input type="text" class="form-control" id="titulo" placeholder="Escreva o nome do evento aqui" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="descricaoBreve" class="form-label">Descrição Breve</label>
-              <input type="text" class="form-control" id="descricaoBreve"
-                placeholder="Faça uma breve descrição do evento" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="inicio" class="form-label">Data de Início</label>
-              <input type="date" class="form-control" id="inicio" required>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="fim" class="form-label">Data de Finalização</label>
-              <input type="date" class="form-control" id="fim" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="regiao" class="form-label">Região</label>
-              <select class="form-select" id="regiao" required>
-                <option value="" disabled selected>Selecionar região</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-              </select>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="bannerEV" class="form-label">Banner</label>
-              <input type="file" class="form-control" id="bannerEV" required>
-            </div>
-          </div>
-          <p style="font-size: 110%;">Filtros</p>
-          <div class="tabFiltrosOrg">
-            <div class="filtroOrg" style="margin-bottom: 1vh;">
-              <input type="checkbox" class="btn-check" id="btn-check-music" value="Música" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-music">Música</label>
-              <input type="checkbox" class="btn-check" id="btn-check-tech" value="Tecnologia" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-tech">Tecnologia</label>
-              <input type="checkbox" class="btn-check" id="btn-check-book" value="Livro" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-book">Livro</label>
-              <input type="checkbox" class="btn-check" id="btn-check-fashion" value="Moda" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-fashion">Moda</label>
-              <input type="checkbox" class="btn-check" id="btn-check-jogos" value="Games" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-jogos">Games</label>
-              <input type="checkbox" class="btn-check" id="btn-check-workshop" value="Workshops" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-workshop">Workshops</label>
-              <input type="checkbox" class="btn-check" id="btn-check-cinemas" value="Cinema" autocomplete="off">
-              <label class="btn btn-outline-secondary" for="btn-check-cinemas">Cinema</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 mb-3">
-              <label for="descricao" class="form-label">Descrição Completa</label>
-              <textarea class="form-control" id="descricao" rows="5" placeholder="Faça uma descrição do seu evento"
-                required></textarea>
-            </div>
-          </div>
-          <button type="button" class="btn btn-success" id="btnCriarEvento">Criar Evento</button>
-        </form>
-      </div>
+    </div>
   </main>
   <footer>
     <ul class="nav justify-content-center">
@@ -199,6 +117,109 @@
       </li>
     </ul>
   </footer>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="text-align: center; color: black;">Criar Novo Evento</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form id="newEventForm">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="titulo" class="form-label">Título do Evento</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Escreva o nome do evento aqui" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="descricaoBreve" class="form-label">Descrição Breve</label>
+                <input type="text" class="form-control" id="descricaoBreve"
+                  placeholder="Faça uma breve descrição do evento" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="inicio" class="form-label">Data de Início</label>
+                <input type="date" class="form-control" id="inicio" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="fim" class="form-label">Data de Finalização</label>
+                <input type="date" class="form-control" id="fim" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="regiao" class="form-label">Região</label>
+                <select class="form-select" id="regiao" required>
+                  <option value="" disabled selected>Selecionar região</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="bannerEV" class="form-label">Banner</label>
+                <input type="file" class="form-control" id="bannerEV" required>
+              </div>
+            </div>
+            <p style="font-size: 110%;">Filtros</p>
+            <div class="tabFiltrosOrg">
+              <div class="filtroOrg" style="margin-bottom: 1vh;">
+                <input type="checkbox" class="btn-check" id="btn-check-music" value="Música" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-music">Música</label>
+                <input type="checkbox" class="btn-check" id="btn-check-tech" value="Tecnologia" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-tech">Tecnologia</label>
+                <input type="checkbox" class="btn-check" id="btn-check-book" value="Livro" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-book">Livro</label>
+                <input type="checkbox" class="btn-check" id="btn-check-fashion" value="Moda" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-fashion">Moda</label>
+                <input type="checkbox" class="btn-check" id="btn-check-jogos" value="Games" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-jogos">Games</label>
+                <input type="checkbox" class="btn-check" id="btn-check-workshop" value="Workshops" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-workshop">Workshops</label>
+                <input type="checkbox" class="btn-check" id="btn-check-cinemas" value="Cinema" autocomplete="off">
+                <label class="btn btn-outline-secondary" for="btn-check-cinemas">Cinema</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="descricao" class="form-label">Descrição Completa</label>
+                <textarea class="form-control" id="descricao" rows="5" placeholder="Faça uma descrição do seu evento"
+                  required></textarea>
+              </div>
+            </div>
+            <div class="criarEV"><button type="button" class="btn btn-success" id="btnCriarEvento">Confirmar</button></div>
+          </form>
+    </div>
+  </div>
+</div>
+<!-- Fim do Modal -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/JS/mainpage.js"></script>

@@ -1,4 +1,4 @@
-nav{
+header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,12 +6,6 @@ nav{
     color: #F0F0F0;
     padding: 5vh;
     gap: 2vw
-}
-
-.nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo{
@@ -22,6 +16,7 @@ nav{
 .nav-link{
     color: #f0f0f0;
 }
+
 .seção, footer {
     display: flex;
     justify-content: center;
@@ -101,7 +96,6 @@ hr{
     text-align: center;
     font-size: 85%;
     gap: 2vw;
-    color: rgb(82, 82, 82);
 }
 .desc-ev{
     text-align: justify;
@@ -125,20 +119,24 @@ hr{
 }
 
 #userSection{
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    justify-content: right;
     align-items: center;
     margin-left: 1vw;
-    padding: 0.3vh 0.5vw;
     border-radius: 7px;
     background-color: #92929262;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 0.5px;
+}
+
+#userSection span:hover{
+    color: white;
 }
 
 .user-icon{
-    height: 5vh;
+    height: 4vh;
     width: auto;
-    margin-left: 0;
-    margin-right: 1vw;
 }
 
 .linhaEventos{
@@ -149,34 +147,32 @@ hr{
     gap: 3vw;
 }
 
+.criarEV{
+    display: flex;
+    justify-content: right;
+}
 
-
-@media (max-width: 775px) {
-    nav {
-        flex-direction: row; /* Retorna à linha em telas maiores */
+@media (max-width: 768px){
+    .filtroOrg, .filtros{
+        padding: 2vh 5vw;
     }
+}
 
-    .tbFiltro {
-        flex-direction: row; /* Mantém na linha em telas maiores */
-    }
-
-    .filtroOrg {
-        flex-direction: row; /* Mantém na linha em telas maiores */
-    }
-
+@media (max-width: 425px) {
     .h1 {
-        font-size: 50px; /* Tamanho original em telas maiores */
+        font-size: 50px;
     }
 
     .filtroOrg, .filtros{
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas de igual largura */
-        gap: 1px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vw;
+        padding: 2vh 5vw;
     }
 
     .row{
         display: grid;
-        grid-template-columns: repeat(1, 1fr); /* 2 colunas de igual largura */
+        grid-template-columns: repeat(1, 1fr);
         gap: 2vh;
     }
 }

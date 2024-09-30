@@ -2,9 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
         const role = localStorage.getItem('userRole');
         const formOrganizador = document.querySelector('#createEventForm');
+        const opcParticipante = document.querySelector('#opcParticipante')
 
         if (role === 'organizador') {
             formOrganizador.style.display = 'block';
+        }
+
+        if (role === 'participante'){
+            opcParticipante.style.display = 'block'
         }
 
         const btnCriarEvento = document.getElementById('btnCriarEvento');
@@ -44,7 +49,8 @@ async function loadEvents() {
 
         // Iterar sobre eventos criados e adicioná-los de acordo com os filtros
         for (const evento of eventosCriados) {
-            if (filtrosSelecionados.length === 0 || filtrosSelecionados.includes(evento.category)) {
+            // Modificação aqui para lidar com múltiplas categorias
+            if (filtrosSelecionados.length === 0 || filtrosSelecionados.some(filtro => evento.category.split(', ').includes(filtro))) {
                 await adicionarEvento(evento, eventosDiv, eventosProximosDiv, userEstado);
             }
         }
@@ -148,6 +154,7 @@ async function criarEvento() {
         document.querySelectorAll('.btn-check').forEach(checkbox => checkbox.checked = false); 
         loadEvents();
         alert("Evento criado com sucesso!");
+        location.reload();
     } catch (error) {
         console.error("Erro ao criar o evento:", error);
         alert("Ocorreu um erro ao criar o evento. Por favor, tente novamente.");
@@ -184,7 +191,7 @@ async function adicionarEvento(evento, eventosDiv, eventosProximosDiv, userEstad
                     <div class="card-body">
                         <h5 class="card-title">${evento.name}</h5>
                         <div class="text-card">
-                            <p class="card-text">${evento.shortDescription || ""}</p>
+                            <p class="card-text">${evento.shortDescription}</p>
                         </div>
                     </div>
                 </div>
@@ -211,7 +218,7 @@ async function adicionarEvento(evento, eventosDiv, eventosProximosDiv, userEstad
                             <p class="desc-ev">${evento.description}</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success" onclick="inscreverEvento('${evento.id}')">Inscrever-se</button>
+                            <button type="button" class="btn btn-success" onclick="inscreverEvento('${evento.id}')" style="display: ${localStorage.getItem('userRole') === 'participante' ? 'inline-block' : 'none'};">Inscrever-se</button>
                             <button type="button" class="btn btn-danger" onclick="deletarEvento('${evento.id}')" style="display: ${localStorage.getItem('userRole') === 'organizador' ? 'inline-block' : 'none'};">Deletar</button>
                         </div>
                     </div>
@@ -275,7 +282,7 @@ function updateInscritos() {
         eventosInscritosDiv.empty();
 
         if (inscritos.length === 0) {
-            eventosInscritosDiv.append('<p>Nenhum evento inscrito.</p>');
+            eventosInscritosDiv.append('<p></p>');
             return;
         }
 
