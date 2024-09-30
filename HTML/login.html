@@ -12,26 +12,23 @@
 <body>
     <div class="container">
         <div class="caixa">
-            <div class="titulo">
-                <img src="/IMAGES/logo.png" alt="Logo da Nexus.EV" class="logo">
-                <h1 class="display-6">Seja Bem-Vindo!</h1>
-            </div>
+            <h1 class="display-6">Seja Bem-Vindo!</h1>
             <hr style="margin-bottom: -2vh;">
-            <form id="login">
+            <form id="loginForm">
                 <div class="form-floating mb-4">
-                    <input type="email" class="form-control" id="email" placeholder="Email" required>
-                    <label for="floatingInput">Email</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+                    <label for="emailInput">Email</label>
                 </div>
                 <div class="form-floating mb-4">
-                    <input type="password" class="form-control" id="senha" placeholder="Senha" required>
-                    <label for="floatingPassword">Senha</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Senha" required>
+                    <label for="passwordInput">Senha</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="button" class="btn btn-primary" onclick="logar()">Entrar</button>
             </form>
             <hr/>
-            <button class="btn btn-primary mb-4" href="/HTML/cadastro.html">Cadastre-se</button>
+            <a class="btn btn-primary mb-4" href="/HTML/cadastro.html">Cadastre-se</a>
         </div>
     </div>
-    <script src="/JS/script.js"></script>
+    <script src="/JS/login.js"></script>
 </body>
 </html>

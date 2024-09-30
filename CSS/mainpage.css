@@ -44,8 +44,7 @@ main{
 }
 
 h2{
-    margin-bottom: 5vh;
-    margin-top: 2vh;
+    margin: 2vh 0;
 }
 
 .tbFiltro{
@@ -66,16 +65,7 @@ h2{
     margin-bottom: 3vh;
 }
 
-.filtro-btn{
-    border-radius: 50px;
-    height: 7vh;
-    width: 8vw;
-    border: none;
-    background-color: #7a849154;
-}
-
 hr{
-    margin-top: 5vh;
     border: solid 1.5px #000000;
 }
 
@@ -118,4 +108,59 @@ hr{
     justify-content: center;
     gap: 0.5vw;
     width: 100%;
+}
+
+.tabFiltrosOrg{
+    padding: 2vh 0;
+}
+
+.opcOrganizador{
+    display: none;
+}
+
+.user-icon{
+    height: 7vh;
+    width: auto;
+    margin-right: 2vw;
+    margin-left: -1vw;
+}
+
+.linhaEventos{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 25vw);
+    gap: 3vw;
+}
+
+
+
+@media (max-width: 775px) {
+    nav {
+        flex-direction: row; /* Retorna à linha em telas maiores */
+    }
+
+    .tbFiltro {
+        flex-direction: row; /* Mantém na linha em telas maiores */
+    }
+
+    .filtroOrg {
+        flex-direction: row; /* Mantém na linha em telas maiores */
+    }
+
+    .h1 {
+        font-size: 50px; /* Tamanho original em telas maiores */
+    }
+
+    .filtroOrg, .filtros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas de igual largura */
+        gap: 1px;
+    }
+
+    .row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 2 colunas de igual largura */
+        gap: 2vh;
+    }
 }

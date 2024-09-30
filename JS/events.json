@@ -1,0 +1,89 @@
+{
+    "events": [
+      {
+        "id": "animage",
+        "name": "ANIMAGE",
+        "start_date": "01/10",
+        "end_date": "06/10",
+        "region": "PE",
+        "organizer": "LEÃO PRODUÇÕES",
+        "image": "/IMAGES/Animage.PNG",
+        "shortDescription": "VIII Festival Internacional de Animação de Pernambuco, com exibição de filmes e mostras de animação.",
+        "description": "O Animage é um festival gratuito e para todas as idades, que acontece em vários locais do Recife. O festival conta com uma Mostra Competitiva de curtas, que premia os melhores filmes em categorias como Direção, Roteiro, Direção de Arte, Técnica e Som.",
+        "filters": ["Música", "Tecnologia"]
+      },
+      {
+        "id": "recn",
+        "name": "RECn`Play",
+        "start_date": "06/11",
+        "end_date": "09/11",
+        "region": "PE",
+        "organizer": "AMPLA",
+        "image": "/IMAGES/recnplay.png",
+        "shortDescription": "Evento focado em inovação, tecnologia e economia criativa, com palestras, workshops e networking.",
+        "description": "Imagine um evento que une tecnologia, cultura, arte, negócios e inovação, tudo de forma gratuita! Esse é o REC'n'Play, que acontecerá de 6 a 9 de novembro no Bairro do Recife.",
+        "filters": ["Tecnologia", "Workshops"]
+      },
+      {
+        "id": "bienal",
+        "name": "Bienal - PE",
+        "start_date": "06/10",
+        "end_date": "15/10",
+        "region": "PE",
+        "organizer": "Governo Federal",
+        "image": "/IMAGES/bienalPE.jpg",
+        "shortDescription": "XII Bienal Internacional do Livro de Pernambuco, reunindo autores, editoras e leitores para celebrar a literatura.",
+        "description": "Um evento literário do porte da Bienal Internacional do Livro de Pernambuco, terceira maior do Brasil e principal referência para o setor editorial no Norte e Nordeste.",
+        "filters": ["Livro"]
+      },
+      {
+        "id": "rock",
+        "name": "Rock in Rio",
+        "start_date": "13/09",
+        "end_date": "22/09",
+        "region": "RJ",
+        "organizer": "Rock in Rio",
+        "image": "/IMAGES/og-rir-br.png",
+        "shortDescription": "Start no Rock in Rio 2024! Shows acontecem em setembro, com Travis Scott, Katy Perry e Shawn Mendes.",
+        "description": "O Rock in Rio é um evento inclusivo que estabelece parcerias com entidades que desenvolvem projetos para um melhor serviço para todos.",
+        "filters": ["Música"]
+      },
+      {
+        "id": "rio",
+        "name": "RIO INNOVATION WEEK",
+        "start_date": "13/08",
+        "end_date": "16/08",
+        "region": "RJ",
+        "organizer": "Governo Federal",
+        "image": "/IMAGES/rioinnovation.jpg",
+        "shortDescription": "Semana dedicada à inovação, com palestras e exposições sobre tecnologia e empreendedorismo.",
+        "description": "O Rio Innovation Week (RIW) é um evento internacional de inovação e tecnologia que acontece no Rio de Janeiro, reunindo empresas e profissionais de diversos setores da economia.",
+        "filters": ["Tecnologia"]
+      },
+      {
+        "id": "bgs",
+        "name": "Brasil Game Show",
+        "start_date": "09/10",
+        "end_date": "13/10",
+        "region": "SP",
+        "organizer": "Agencia Flare",
+        "image": "/IMAGES/BGS.PNG",
+        "shortDescription": "Feira de games da América Latina, com competições e novidades sobre lançamentos do setor.",
+        "description": "A Brasil Game Show (BGS) 2024 será realizada entre os dias 9 e 13 de outubro no Expo Center Norte, em São Paulo.",
+        "filters": ["Games"]
+      },
+      {
+        "id": "lolla",
+        "name": "LollaPalooza",
+        "start_date": "28/03",
+        "end_date": "30/03",
+        "region": "SP",
+        "organizer": "Lollapalooza",
+        "image": "/IMAGES/lollapalooza.jpg",
+        "shortDescription": "Festival de música internacional, com artistas de diversos gêneros e atrações no Brasil.",
+        "description": "O Lollapalooza é um festival musical que reúne artistas de vários estilos, se expandindo para vários países, incluindo o Brasil.",
+        "filters": ["Música"]
+      }
+    ]
+  }
+  
