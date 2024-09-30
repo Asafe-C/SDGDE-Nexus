@@ -18,21 +18,22 @@
   <nav class="seção">
     <img src="/IMAGES/logo.png" alt="" class="logo">
     <ul class="nav nav-pills">
-        <li class="nav-item" id="criarConta">
-            <a class="nav-link" href="/HTML/cadastro.html" id="criarConta">Crie Sua Conta</a>
-        </li>
-        <li class="nav-item" id="loginSection">
-            <a class="nav-link" href="/HTML/login.html">Login</a>
-        </li>
-        <li class="nav-item" id="userSection" style="display: none;">
-            <span class="nav-link" id="username"></span>
-            <img src="/IMAGES/user-icon.png" alt="User Icon" class="user-icon">
-        </li>
-        <li class="nav-item">
-            <a style="background-color: #0EAD69;" class="nav-link active" aria-current="page" href="https://www.instagram.com/escuderia.nexus/">Contate-nos</a>
-        </li>
+      <li class="nav-item">
+        <a style="background-color: #0EAD69;" class="nav-link active" aria-current="page"
+          href="https://www.instagram.com/escuderia.nexus/">Contate-nos</a>
+      </li>
+      <li class="nav-item" id="criarConta">
+        <a class="nav-link" href="/HTML/cadastro.html" id="criarConta">Crie Sua Conta</a>
+      </li>
+      <li class="nav-item" id="loginSection">
+        <a class="nav-link" href="/HTML/login.html">Login</a>
+      </li>
+      <li class="nav-item" id="userSection" style="display: none;">
+        <span class="nav-link" id="username"></span>
+        <img src="/IMAGES/user-icon.png" alt="User Icon" class="user-icon">
+      </li>
     </ul>
-</nav>
+  </nav>
   <p class="h1">A MAIS SIMPLES E PODEROSA FORMA DE GERENCIAMENTO DE EVENTOS</p>
   <main>
     <div class="tbFiltro">
@@ -41,25 +42,25 @@
         <div class="filtros">
           <input type="checkbox" class="btn-check" id="btn-check-musica" value="Música" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btn-check-musica">Música</label>
-      
+
           <input type="checkbox" class="btn-check" id="btn-check-tecnologia" value="Tecnologia" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btn-check-tecnologia">Tecnologia</label>
-      
+
           <input type="checkbox" class="btn-check" id="btn-check-livro" value="Livro" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btn-check-livro">Livro</label>
-      
+
           <input type="checkbox" class="btn-check" id="btn-check-moda" value="Moda" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btn-check-moda">Moda</label>
-      
+
           <input type="checkbox" class="btn-check" id="btn-check-games" value="Games" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btn-check-games">Games</label>
-      
+
           <input type="checkbox" class="btn-check" id="btn-check-workshops" value="Workshops" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btn-check-workshops">Workshops</label>
-      
+
           <input type="checkbox" class="btn-check" id="btn-check-cinema" value="Cinema" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btn-check-cinema">Cinema</label>
-      </div>      
+        </div>
       </div>
     </div>
     <br>
@@ -203,19 +204,19 @@
   <script src="/JS/mainpage.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const username = localStorage.getItem('userNome'); // Supondo que você armazene o nome do usuário no localStorage
-        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+      const username = localStorage.getItem('userNomeP') + ' ' + localStorage.getItem('userNomeU') // Supondo que você armazene o nome do usuário no localStorage
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
-        if (isLoggedIn === true) {
-            document.getElementById('username').textContent = username; // Exibe o nome do usuário
-            document.getElementById('userSection').style.display = 'flex'; // Mostra a seção do usuário
-            document.getElementById('criarConta').style.display = 'none'; // Esconde a seção de criar conta
-            document.getElementById('loginSection').style.display = 'none'; // Esconde a seção de login
-        } else {
-            document.getElementById('userSection').style.display = 'none'; // Esconde a seção do usuário se não houver nome
-        }
+      if (isLoggedIn === true) {
+        document.getElementById('username').textContent = username; // Exibe o nome do usuário
+        document.getElementById('userSection').style.display = 'flex'; // Mostra a seção do usuário
+        document.getElementById('criarConta').style.display = 'none'; // Esconde a seção de criar conta
+        document.getElementById('loginSection').style.display = 'none'; // Esconde a seção de login
+      } else {
+        document.getElementById('userSection').style.display = 'none'; // Esconde a seção do usuário se não houver nome
+      }
     });
-</script>
+  </script>
 </body>
 
 </html>

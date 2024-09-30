@@ -8,6 +8,12 @@ nav{
     gap: 2vw
 }
 
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo{
     height: 80px;
     margin-top: -10px;
@@ -118,11 +124,21 @@ hr{
     display: none;
 }
 
+#userSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    padding: 0.3vh 0.5vw;
+    border-radius: 7px;
+    background-color: #92929262;
+}
+
 .user-icon{
-    height: 7vh;
+    height: 5vh;
     width: auto;
-    margin-right: 2vw;
-    margin-left: -1vw;
+    margin-left: 0;
+    margin-right: 1vw;
 }
 
 .linhaEventos{

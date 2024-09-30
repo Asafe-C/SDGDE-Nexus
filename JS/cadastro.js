@@ -38,6 +38,12 @@ function validarCNPJ(cnpj) {
     return regexCNPJ.test(cnpj);
 }
 
+// Validação para verificar se o nome contém apenas uma palavra
+function validarNome(nomePU) {
+    const regexNome = /^\S+$/; // Regex que valida se o nome é uma única palavra sem espaços
+    return regexNome.test(nomePU);
+}
+
 // Função para exibir mensagens de erro
 function mostrarErro(mensagem) {
     alert(mensagem); // Exibe a mensagem de erro
@@ -49,8 +55,8 @@ function handleSubmit(event) {
 
     // Selecionando os campos do formulário
     const formData = {
-        nome: document.getElementById('nome').value,
-        nascimento: document.getElementById('nascimento').value,
+        nomeP: document.getElementById('nomeP').value,
+        nomeU: document.getElementById('nomeU').value,
         estado: document.getElementById('estado').value,
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,
@@ -60,6 +66,16 @@ function handleSubmit(event) {
     };
 
     // Validações
+    if (!validarNome(formData.nomeP)) {
+        mostrarErro("O primeiro nome deve conter apenas uma palavra.");
+        return;
+    }
+
+    if (!validarNome(formData.nomeU)) {
+        mostrarErro("O último nome deve conter apenas uma palavra.");
+        return;
+    }
+
     if (!validarEmail(formData.email)) {
         mostrarErro("Por favor, insira um email válido.");
         return;
@@ -82,8 +98,8 @@ function handleSubmit(event) {
     }
 
     // Armazenando os dados no localStorage
-    localStorage.setItem('userNome', formData.nome);
-    localStorage.setItem('userNascimento', formData.nascimento);
+    localStorage.setItem('userNomeP', formData.nomeP);
+    localStorage.setItem('userNomeU', formData.nomeU);
     localStorage.setItem('userEstado', formData.estado);
     localStorage.setItem('userLogin', formData.email);
     localStorage.setItem('userSenha', formData.password);
