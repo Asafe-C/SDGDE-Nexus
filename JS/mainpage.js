@@ -272,6 +272,10 @@ function inscreverEvento(eventId) {
     }
 }
 
+function deslogar(){
+    window.location.href = "login.html";
+}
+
 /**
  * Função para atualizar a lista de eventos inscritos
  */

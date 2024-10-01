@@ -35,7 +35,7 @@ async function logar() {
         // Verificando se as credenciais são válidas
         if (emailInput.value === storedEmail && passwordInput.value === storedPassword) {
             localStorage.setItem('isLoggedIn', 'true');
-            window.location.href = "mainpage.html"; // Redireciona para a página inicial
+            window.location.href = "mainpage.html"; // Redireciona para a página principal
         } else {
             throw new Error("Email ou senha incorretos.");
         }

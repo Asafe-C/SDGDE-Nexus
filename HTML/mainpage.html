@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="/CSS/mainpage.css">
   <link rel="stylesheet" href="/CSS/style.css">
   <link rel="shortcut icon" href="/IMAGES/Logofav.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Homepage | NexusEV</title>
 </head>
 
@@ -32,7 +35,7 @@
       <li class="nav-item" id="createEventForm" style="display: none">
         <button style="background-color: #0EAD69; margin-left: 1vw;"type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Criar Evento</button>
       </li>
-      <li class="nav-item" id="userSection" style="display: none;">
+      <li class="nav-item" id="userSection" style="display: none; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#perfilModal">
         <span class="nav-link" id="username"></span>
         <img src="/IMAGES/user-icon.png" alt="User Icon" class="user-icon">
       </li>
@@ -113,14 +116,44 @@
         <a class="nav-link" href="#">Menções legais</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">© Nexus 2024</a>
+        <a style="cursor: default;" class="nav-link">© Nexus 2024</a>
       </li>
     </ul>
   </footer>
 
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+<div class="modal fade" id="perfilModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Perfil</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <div class="imgPerfil">
+        <img src="/IMAGES/user-profile.png" alt="" class="userIconProfile">
+      </div>
+      <p style="margin-bottom: -0.5vh; color: black;"><stronger>Nome:</stronger></p>
+      <span style="color: rgb(85, 85, 85);" id="nomeUserPerfil"></span>
+      <br>
+      <p style="margin-bottom: -0.5vh; color: black;"><stronger>E-mail:</stronger></p>
+      <span style="color: rgb(85, 85, 85);" id="emailUserPerfil"></span>
+      <br>
+      <p style="margin-bottom: -0.5vh; color: black;"><stronger>Região:</stronger></p>
+      <span style="color: rgb(85, 85, 85);" id="regiaoUserPerfil"></span>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" onclick="deslogar()">Desconectar</button>
+    </div>
+  </div>
+</div>
+</div>
+<!--Fim do Modal-->
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h3 style="text-align: center; color: black;">Criar Novo Evento</h2>
@@ -196,7 +229,7 @@
                 <input type="checkbox" class="btn-check" id="btn-check-tech" value="Tecnologia" autocomplete="off">
                 <label class="btn btn-outline-secondary" for="btn-check-tech">Tecnologia</label>
                 <input type="checkbox" class="btn-check" id="btn-check-book" value="Livro" autocomplete="off">
-                <label class="btn btn-outline-secondary" for="btn-check-book">Livro</label>
+                <label class="btn btn-outline-secondary" for="btn-check-book">Livros</label>
                 <input type="checkbox" class="btn-check" id="btn-check-fashion" value="Moda" autocomplete="off">
                 <label class="btn btn-outline-secondary" for="btn-check-fashion">Moda</label>
                 <input type="checkbox" class="btn-check" id="btn-check-jogos" value="Games" autocomplete="off">
@@ -225,18 +258,42 @@
   <script src="/JS/mainpage.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const username = localStorage.getItem('userNomeP') + ' ' + localStorage.getItem('userNomeU') // Supondo que você armazene o nome do usuário no localStorage
-      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const username = localStorage.getItem('userNomeP') + ' ' + localStorage.getItem('userNomeU');
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
-      if (isLoggedIn === true) {
+    if (isLoggedIn) {
         document.getElementById('username').textContent = username; // Exibe o nome do usuário
         document.getElementById('userSection').style.display = 'flex'; // Mostra a seção do usuário
         document.getElementById('criarConta').style.display = 'none'; // Esconde a seção de criar conta
         document.getElementById('loginSection').style.display = 'none'; // Esconde a seção de login
-      } else {
+        
+        // Carregar dados do usuário
+        carregarDadosUsuario();
+    } else {
         document.getElementById('userSection').style.display = 'none'; // Esconde a seção do usuário se não houver nome
-      }
-    });
+    }
+
+    // Função para carregar os dados do usuário
+    function carregarDadosUsuario() {
+        // Obter dados do webStorage
+        const userLogin = localStorage.getItem('userLogin');
+        const userEstado = localStorage.getItem('userEstado');
+
+        // Verificar se os dados existem
+        if (username) {
+            document.getElementById('nomeUserPerfil').textContent = username;
+        }
+
+        if (userLogin) {
+            document.getElementById('emailUserPerfil').textContent = userLogin;
+        }
+
+        if (userEstado) {
+            document.getElementById('regiaoUserPerfil').textContent = userEstado;
+        }
+    }
+});
+
   </script>
 </body>
 

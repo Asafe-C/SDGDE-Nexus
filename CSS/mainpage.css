@@ -1,3 +1,4 @@
+
 header{
     display: flex;
     justify-content: center;
@@ -28,15 +29,6 @@ header{
 #criarConta{
     border-right: solid 2px rgba(128, 128, 128, 0.400);
     border-radius: 0;
-}
-
-.h1{
-    justify-content: center;
-    text-align: center;
-    font-size: 50px;
-    display: flex;
-    margin: 5vh 0;
-    align-items: center;
 }
 
 main{
@@ -83,7 +75,7 @@ hr{
     height: 12vh;
 }
 
-.modal-body img{
+.modal-body img:not(.userIconProfile){
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -152,6 +144,18 @@ hr{
     justify-content: right;
 }
 
+.userIconProfile{
+    height: 15vh;
+}
+
+.imgPerfil{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 768px){
     .filtroOrg, .filtros{
         padding: 2vh 5vw;
@@ -169,7 +173,7 @@ hr{
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .h1 {
         font-size: 50px;
     }

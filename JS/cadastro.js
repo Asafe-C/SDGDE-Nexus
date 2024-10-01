@@ -111,5 +111,6 @@ function handleSubmit(event) {
     }
 
     alert("Formulário enviado com sucesso!"); // Mensagem de sucesso
-    window.location.href = "login.html"; // Redireciona para a página de login
+    localStorage.setItem('isLoggedIn', 'true');
+    window.location.href = "mainpage.html"; // Redireciona para a página de login
 }
