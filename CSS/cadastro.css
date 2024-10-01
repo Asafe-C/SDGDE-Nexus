@@ -1,49 +1,101 @@
-.container {
+body{
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.containerE{
+    flex: 1.50;
+    background: url('/IMAGES/Fundo.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+.containerD {
+    flex: 1.25;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
+    height: 100%; 
 }
 
 .caixa {
     background-color: rgba(255, 255, 255, 0.85);
-    border: solid 0.2px #8a8a8a52;
-    box-shadow: 1px 1px 7px 2px rgba(134, 134, 134, 0.3);
-    width: 60vw;
-    border-radius: 15px;
+    height: 100%;
+    width: 50vw;
     padding: 20px;
 }
 
-h1 {
-    margin-bottom: 2vh;
-    color: #575757;
-    text-align: center;
+.formulario{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.submitar{
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #575757;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
 .form-control, .form-select {
     width: 100%;
     max-width: 400px;
     margin-bottom: 1.5vh;
 }
 
-/* Responsividade para Tablets e Laptops */
-@media (max-width: 1024px) {
-    .caixa {
-        width: 70vw;
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
     }
 
-    .form-control, .form-select, button {
-        max-width: 100%;
+    .containerE, .containerD {
+        height: 100%;
     }
 }
 
-/* Responsividade para Celulares */
 @media (max-width: 480px) {
-    .caixa {
-        width: 90vw;
+    .containerE {
+        display: none;
     }
 
-    .form-control, .form-select, button {
-        max-width: 100%;
+    .containerD {
+        height: 100vh;
+        padding: 10px;
+        background-color: white;
+    }
+    
+    body{
+        background-color: white;
+    }
+
+    .caixa {
+        height: 100vh;
+        width: auto;
+        padding: 0 3vw 30vh;
+    }
+    
+    .formulario{
+        height: 100vh;
+        display: block;
+    }
+
+    .form-control, .form-select {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.6em; /* Reduzindo o tamanho para telas menores */
     }
 }

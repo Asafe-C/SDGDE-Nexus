@@ -75,8 +75,8 @@ hr{
 }
 
 .card-img-top{
-        height: 200px;
-        object-fit: cover;
+    height: 200px;
+    object-fit: cover;
 }
 
 .text-card{
@@ -156,6 +156,17 @@ hr{
     .filtroOrg, .filtros{
         padding: 2vh 5vw;
     }
+
+    .card-img-top{
+        height: 15vh;
+        object-fit: cover;
+    }
+
+    .card{
+        height: 30vh;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 @media (max-width: 425px) {
@@ -173,6 +184,22 @@ hr{
     .row{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        gap: 2vh;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .nav-item, li button, li a{
+        padding: 0;
+        font-size: 50%;
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 2vh;
     }
 }

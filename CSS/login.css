@@ -69,6 +69,17 @@ hr{
 
 /* Responsividade para Celulares */
 @media (max-width: 480px) {
+    .containerE{
+        display: none;
+    }
+    
+    .icon-{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .caixa {
         width: 90vw;
     }
